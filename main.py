@@ -8,8 +8,13 @@ class Query:
             self.name = query[2]
 
 def read_queries():
-    n = int(input())
-    return [Query(input().split()) for i in range(n)]
+    n = input()
+   # return [Query(input().split()) for i in range(n)]
+    query = n.split()
+    kverijs = query[0]
+    numurs = int(query[1])
+    vards = query[2]
+
 
 def write_responses(result):
     print('\n'.join(result))
@@ -44,4 +49,3 @@ def process_queries(queries):
 
 if __name__ == '__main__':
     write_responses(process_queries(read_queries()))
-
